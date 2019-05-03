@@ -1,0 +1,82 @@
+called: g++
+	/home/adriancarmona/Escritorio/AG/practica 3
+	g++
+	-std=gnu++0x
+	-g
+	-I./include
+	-c
+	src/tsp_cercania.cpp
+	-o
+	obj/tsp_cercania.o
+
+called: g++
+	/home/adriancarmona/Escritorio/AG/practica 3
+	g++
+	-std=gnu++0x
+	-g
+	-I./include
+	-c
+	src/matriz.cpp
+	-o
+	obj/matriz.o
+
+called: g++
+	/home/adriancarmona/Escritorio/AG/practica 3
+	g++
+	-std=gnu++0x
+	-g
+	-I./include
+	-no-pie
+	-o
+	bin/tsp_cercania
+	obj/tsp_cercania.o
+	obj/matriz.o
+
+called: /usr/bin/ld
+	/home/adriancarmona/Escritorio/AG/practica 3
+	/usr/bin/ld
+	-plugin
+	/usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so
+	-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
+	-plugin-opt=-fresolution=/tmp/ccPeKvXN.res
+	-plugin-opt=-pass-through=-lgcc_s
+	-plugin-opt=-pass-through=-lgcc
+	-plugin-opt=-pass-through=-lc
+	-plugin-opt=-pass-through=-lgcc_s
+	-plugin-opt=-pass-through=-lgcc
+	--sysroot=/
+	--build-id
+	--eh-frame-hdr
+	-m
+	elf_x86_64
+	--hash-style=gnu
+	--as-needed
+	-dynamic-linker
+	/lib64/ld-linux-x86-64.so.2
+	-z
+	relro
+	-o
+	bin/tsp_cercania
+	/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crt1.o
+	/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o
+	/usr/lib/gcc/x86_64-linux-gnu/7/crtbegin.o
+	-L/usr/lib/gcc/x86_64-linux-gnu/7
+	-L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu
+	-L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib
+	-L/lib/x86_64-linux-gnu
+	-L/lib/../lib
+	-L/usr/lib/x86_64-linux-gnu
+	-L/usr/lib/../lib
+	-L/usr/lib/gcc/x86_64-linux-gnu/7/../../..
+	obj/tsp_cercania.o
+	obj/matriz.o
+	-lstdc++
+	-lm
+	-lgcc_s
+	-lgcc
+	-lc
+	-lgcc_s
+	-lgcc
+	/usr/lib/gcc/x86_64-linux-gnu/7/crtend.o
+	/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
+
